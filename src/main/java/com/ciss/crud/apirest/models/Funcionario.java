@@ -17,7 +17,7 @@ public class Funcionario  implements Serializable {
     private String nome;
     private String sobrenome;
     private String email;
-    private String niss;
+    private String nis;
 
     public long getId() {
         return id;
@@ -51,11 +51,11 @@ public class Funcionario  implements Serializable {
         this.email = email;
     }
 
-    public String getNiss() {
-        return niss;
+    public String getNis() {
+        return nis;
     }
 
-    public void setNiss(String niss) {
-        this.niss = niss;
+    public void setNis(String nis) {
+        this.nis = nis;
     }
 }
