@@ -11,8 +11,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api")
+@CrossOrigin(origins = "http://localhost:3000") //liberação de acesso aos domínios (* indica acesso liberado a qualquer domínio).
 @Api(value = "API REST Funcionarios")
-@CrossOrigin(origins = "*") //liberação de acesso aos domínios (* indica acesso liberado a qualquer domínio).
+
 public class FuncionarioController {
 
     @Autowired
@@ -36,9 +37,9 @@ public class FuncionarioController {
         return funcionarioRepository.save(funcionario);
     }
 
-    @DeleteMapping("/funcionarios")
-    @ApiOperation(value = "Deleta um funcionário")
-    public void delFunc(@RequestBody Funcionario funcionario){
+    @DeleteMapping("/funcionarios/{id}")
+    @ApiOperation(value = "Deleta um funcionário à partir do id.")
+    public void delFunc(@PathVariable(value = "id") Funcionario funcionario){
         funcionarioRepository.delete(funcionario);
     }
 
