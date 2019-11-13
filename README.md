@@ -1,7 +1,7 @@
 # API-CRUD
 API de um CRUD de cadastro de funcionários.
 
-#Configurações para execução:
+## Configurações para execução:
 
 1. Baixar o projeto para um local desejado.
 
